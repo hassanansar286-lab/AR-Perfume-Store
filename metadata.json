@@ -1,0 +1,6 @@
+{
+  "name": "AR PERFUME STORE",
+  "description": "Discover Your Signature Scent – Elegance in Every Drop. Fine fragrances, oud, florals, and luxury gift sets across Pakistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

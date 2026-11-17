@@ -1,0 +1,495 @@
+import { PerfumeProduct, OrderRecord } from '../types/perfume';
+
+export const BUSINESS_CONTACT = {
+  brandName: 'AR PERFUME STORE',
+  heroTagline: 'Discover Your Signature Scent – Elegance in Every Drop.',
+  brandTagline: 'Your Fragrance, Your Identity, Your Elegance.',
+  whatsappDisplay: '+92 341 9787786',
+  whatsappLink: 'https://wa.me/923419787786',
+  email: 'arperfumestore@gmail.com',
+  supportHours: 'Monday–Saturday · 10:00 AM – 8:00 PM PKT',
+  location: 'Pakistan',
+  brandStory:
+    'AR PERFUME STORE is dedicated to bringing elegance, sophistication and unforgettable fragrance experiences to perfume lovers. Our collection features a variety of fragrance styles for men and women, from refreshing everyday scents to rich and luxurious fragrances for special occasions. Our goal is to make fragrance shopping simple, enjoyable and accessible while providing excellent customer service, convenient ordering and a premium shopping experience.',
+};
+
+export const SIZE_PRICING_GUIDE = [
+  { size: '10ml', priceRange: 'Rs. 499–799', description: 'Travel atomizer for discovery and daily carry' },
+  { size: '30ml', priceRange: 'Rs. 999–1,599', description: 'Compact personal flacon for signature rotation' },
+  { size: '50ml', priceRange: 'Rs. 1,999–2,999', description: 'Classic boutique bottle for everyday wear' },
+  { size: '100ml', priceRange: 'Rs. 2,999–4,999', description: 'Full signature presentation bottle' },
+];
+
+export const SPECIAL_OFFERS = [
+  {
+    title: 'First Order Discount',
+    highlight: '10% Off',
+    detail: 'Apply code FIRST10 at checkout or toggle First Order savings in your shopping bag.',
+    code: 'FIRST10',
+  },
+  {
+    title: 'Buy 2 Perfumes',
+    highlight: '5% Discount',
+    detail: 'Automatically applied in your bag when ordering any two fragrances.',
+  },
+  {
+    title: 'Buy 3 Perfumes',
+    highlight: '10% Discount',
+    detail: 'Automatically applied in your bag when ordering three or more fragrances.',
+  },
+  {
+    title: 'Gift Sets',
+    highlight: 'Special Bundle Pricing',
+    detail: 'Curated multi-bottle coffrets priced below individual bottle retail.',
+  },
+  {
+    title: 'Seasonal Sales',
+    highlight: 'Up to 20% Off',
+    detail: 'Apply code SEASON20 on seasonal selections or watch marked editions.',
+    code: 'SEASON20',
+  },
+];
+
+export const PRODUCTS: PerfumeProduct[] = [
+  {
+    id: 'royal-oud',
+    slug: 'royal-oud',
+    name: 'Royal Oud',
+    tagline: 'Rich oud, warm woods and sophisticated oriental notes.',
+    description:
+      'Rich oud, warm woods and sophisticated oriental notes. A bold fragrance for special occasions and evening wear, composed to leave an opulent trail that lingers effortlessly from dusk into midnight.',
+    audience: 'Unisex',
+    fragranceFamily: 'Oriental',
+    secondaryFamily: 'Woody',
+    badgeText: 'Best Seller',
+    image: '/src/assets/images/perfume_royal_oud_1794923808311.jpg',
+    defaultSize: '100ml',
+    variants: [
+      { size: '10ml', pricePkr: 799 },
+      { size: '30ml', pricePkr: 1599 },
+      { size: '50ml', pricePkr: 2999 },
+      { size: '100ml', pricePkr: 4999, originalPricePkr: 5600 },
+    ],
+    notes: {
+      top: ['Kashmiri Saffron', 'Calabrian Bergamot', 'Pink Pepper'],
+      middle: ['Aged Agarwood Oud', 'Damask Rose', 'Sacred Incense'],
+      base: ['Warm Ambergris', 'Mysore Sandalwood', 'Smoked Leather'],
+    },
+    longevity: '10–12 Hours',
+    sillage: 'Strong',
+    occasion: 'Evening & Formal Gatherings',
+    reviews: [
+      {
+        id: 'rev-ro-1',
+        author: 'Tariq Mahmood',
+        city: 'Lahore',
+        rating: 5,
+        date: '12 Oct 2026',
+        comment:
+          'Deep woody oud without being harsh. Wore it to a family wedding in Lahore and received compliments all night.',
+        verifiedPurchase: true,
+      },
+      {
+        id: 'rev-ro-2',
+        author: 'Ayesha Siddiqui',
+        city: 'Islamabad',
+        rating: 5,
+        date: '03 Nov 2026',
+        comment:
+          'Truly unisex and refined. The saffron opening softens into warm sandalwood after an hour.',
+        verifiedPurchase: true,
+      },
+    ],
+  },
+  {
+    id: 'black-intense',
+    slug: 'black-intense',
+    name: 'Black Intense',
+    tagline: 'A powerful blend of spicy, woody and warm aromatic notes.',
+    description:
+      'A powerful blend of spicy, woody and warm aromatic notes. Designed for confidence, elegance and a memorable impression in boardrooms and late-night dinners alike.',
+    audience: 'Men',
+    fragranceFamily: 'Woody',
+    secondaryFamily: 'Oriental',
+    badgeText: 'Signature Men',
+    image: '/src/assets/images/perfume_black_intense_1794923806090.jpg',
+    defaultSize: '100ml',
+    variants: [
+      { size: '10ml', pricePkr: 699 },
+      { size: '30ml', pricePkr: 1399 },
+      { size: '50ml', pricePkr: 2499 },
+      { size: '100ml', pricePkr: 3999 },
+    ],
+    notes: {
+      top: ['Crushed Black Pepper', 'Green Cardamom', 'Bergamot Zest'],
+      middle: ['Atlas Cedarwood', 'Wild Lavender', 'Clary Sage'],
+      base: ['Haitian Vetiver', 'Dark Patchouli', 'Roasted Tonka Bean'],
+    },
+    longevity: '8–10 Hours',
+    sillage: 'Moderate to Strong',
+    occasion: 'Office, Evening & Formal Wear',
+    reviews: [
+      {
+        id: 'rev-bi-1',
+        author: 'Hamza Khalid',
+        city: 'Karachi',
+        rating: 5,
+        date: '28 Oct 2026',
+        comment:
+          'Sharp spicy opening and a very clean cedarwood dry down. COD delivery arrived in Karachi within 3 days.',
+        verifiedPurchase: true,
+      },
+    ],
+  },
+  {
+    id: 'rose-elegance',
+    slug: 'rose-elegance',
+    name: 'Rose Elegance',
+    tagline: 'Delicate rose-inspired notes with a soft, romantic character.',
+    description:
+      'A beautiful floral fragrance with delicate rose-inspired notes and a soft, romantic character. Crafted around fresh morning petals layered over sheer cashmere woods and warm white musk.',
+    audience: 'Women',
+    fragranceFamily: 'Floral',
+    badgeText: 'Women Favorite',
+    image: '/src/assets/images/perfume_rose_elegance_1794923807819.jpg',
+    defaultSize: '100ml',
+    variants: [
+      { size: '10ml', pricePkr: 599 },
+      { size: '30ml', pricePkr: 1299 },
+      { size: '50ml', pricePkr: 2299 },
+      { size: '100ml', pricePkr: 3499 },
+    ],
+    notes: {
+      top: ['Fresh Lychee', 'Dewy Pear', 'Sweet Mandarin'],
+      middle: ['Damask Rose', 'Pink Peony', 'Jasmine Sambac'],
+      base: ['White Musk', 'Cashmere Wood', 'Madagascar Vanilla'],
+    },
+    longevity: '7–9 Hours',
+    sillage: 'Moderate',
+    occasion: 'Daytime, Brunch & Romantic Evenings',
+    reviews: [
+      {
+        id: 'rev-re-1',
+        author: 'Zainab Raza',
+        city: 'Rawalpindi',
+        rating: 5,
+        date: '06 Nov 2026',
+        comment:
+          'Natural fresh rose scent—not overly sweet or synthetic. Bottle presentation feels worthy of a gift.',
+        verifiedPurchase: true,
+      },
+    ],
+  },
+  {
+    id: 'blue-ocean',
+    slug: 'blue-ocean',
+    name: 'Blue Ocean',
+    tagline: 'Fresh aquatic fragrance with crisp citrus and clean aromatics.',
+    description:
+      'A fresh aquatic fragrance with refreshing citrus and clean aromatic character. Ideal for everyday use in warm weather, delivering effortless coastal clarity from morning commute to evening.',
+    audience: 'Men',
+    fragranceFamily: 'Fresh',
+    secondaryFamily: 'Citrus',
+    badgeText: 'Everyday Fresh',
+    image: '/src/assets/images/perfume_blue_ocean_1794923807837.jpg',
+    defaultSize: '100ml',
+    variants: [
+      { size: '10ml', pricePkr: 499 },
+      { size: '30ml', pricePkr: 1099 },
+      { size: '50ml', pricePkr: 1999 },
+      { size: '100ml', pricePkr: 2999 },
+    ],
+    notes: {
+      top: ['Sea Salt Accord', 'Sicilian Lemon', 'Crushed Mint'],
+      middle: ['Marine Breeze', 'Geranium Leaf', 'Mediterranean Rosemary'],
+      base: ['Sun-Bleached Driftwood', 'Ambroxan', 'White Cedar'],
+    },
+    longevity: '6–8 Hours',
+    sillage: 'Moderate',
+    occasion: 'Daily Wear, Summer & Travel',
+    reviews: [
+      {
+        id: 'rev-bo-1',
+        author: 'Usman Farooq',
+        city: 'Faisalabad',
+        rating: 4,
+        date: '19 Oct 2026',
+        comment:
+          'Very crisp and refreshing for humid days. Ordered the 100ml bottle and the spray atomizer is super fine.',
+        verifiedPurchase: true,
+      },
+    ],
+  },
+  {
+    id: 'golden-amber',
+    slug: 'golden-amber',
+    name: 'Golden Amber',
+    tagline: 'Warm amber-inspired fragrance with rich, sweet and woody depth.',
+    description:
+      'A warm amber-inspired fragrance with rich, sweet and woody character. Perfect for those who love luxurious scents that wrap the skin in glowing resin, spiced honey, and velvety woods.',
+    audience: 'Unisex',
+    fragranceFamily: 'Oriental',
+    secondaryFamily: 'Woody',
+    badgeText: 'Seasonal Highlight',
+    seasonalSaleNote: 'Eligible for Seasonal Sale up to 20% Off',
+    image: '/src/assets/images/perfume_golden_amber_1794923808031.jpg',
+    defaultSize: '100ml',
+    variants: [
+      { size: '10ml', pricePkr: 749 },
+      { size: '30ml', pricePkr: 1499 },
+      { size: '50ml', pricePkr: 2799 },
+      { size: '100ml', pricePkr: 4499 },
+    ],
+    notes: {
+      top: ['Ceylon Cinnamon', 'Orange Blossom', 'Wild Honey'],
+      middle: ['Spanish Labdanum', 'Benzoin Resin', 'Myrrh'],
+      base: ['Golden Amber', 'Vanilla Pod', 'Guaiac Wood'],
+    },
+    longevity: '10+ Hours',
+    sillage: 'Strong',
+    occasion: 'Cool Evenings & Special Celebrations',
+    reviews: [
+      {
+        id: 'rev-ga-1',
+        author: 'Sana Mir',
+        city: 'Lahore',
+        rating: 5,
+        date: '09 Nov 2026',
+        comment:
+          'Warm, resinous, and subtly sweet. Stays on winter coats for days without feeling heavy.',
+        verifiedPurchase: true,
+      },
+    ],
+  },
+  {
+    id: 'floral-bloom',
+    slug: 'floral-bloom',
+    name: 'Floral Bloom',
+    tagline: 'Graceful floral blend with fresh, delicate feminine notes.',
+    description:
+      'A graceful floral blend with fresh, delicate and feminine notes for daily wear. Luminously balanced between white blossoms, sunlit peach skin, and creamy sandalwood.',
+    audience: 'Women',
+    fragranceFamily: 'Floral',
+    image: '/src/assets/images/perfume_floral_bloom_1794923810905.jpg',
+    defaultSize: '50ml',
+    variants: [
+      { size: '10ml', pricePkr: 549 },
+      { size: '30ml', pricePkr: 1199 },
+      { size: '50ml', pricePkr: 2499 },
+      { size: '100ml', pricePkr: 3699 },
+    ],
+    notes: {
+      top: ['Neroli Blossom', 'Green Mandarin', 'White Peach'],
+      middle: ['Indian Tuberose', 'Orange Flower', 'Magnolia'],
+      base: ['Orris Root', 'Creamy Sandalwood', 'Soft Musk'],
+    },
+    longevity: '6–8 Hours',
+    sillage: 'Soft to Moderate',
+    occasion: 'Daily Wear, Office & Daytime Events',
+    reviews: [
+      {
+        id: 'rev-fb-1',
+        author: 'Hira Qureshi',
+        city: 'Karachi',
+        rating: 5,
+        date: '22 Oct 2026',
+        comment:
+          'Light, graceful white floral that works wonderfully for university and office wear.',
+        verifiedPurchase: true,
+      },
+    ],
+  },
+  {
+    id: 'musk-essence',
+    slug: 'musk-essence',
+    name: 'Musk Essence',
+    tagline: 'Smooth, soft musk-inspired scent with clean elegance.',
+    description:
+      'A smooth, soft musk-inspired scent with a clean and elegant character. An intimate second-skin composition marrying crisp white tea, powdery iris, and silky cedarwood.',
+    audience: 'Unisex',
+    fragranceFamily: 'Fresh',
+    secondaryFamily: 'Woody',
+    image: '/src/assets/images/perfume_musk_essence_1794923809993.jpg',
+    defaultSize: '50ml',
+    variants: [
+      { size: '10ml', pricePkr: 499 },
+      { size: '30ml', pricePkr: 1099 },
+      { size: '50ml', pricePkr: 2199 },
+      { size: '100ml', pricePkr: 3299 },
+    ],
+    notes: {
+      top: ['Clean Aldehydes', 'White Tea', 'Violet Leaf'],
+      middle: ['Cashmere Musk', 'Orris Butter', 'Lily of the Valley'],
+      base: ['Ambrette Seed', 'Blonde Cedar', 'Velvet Skin Musk'],
+    },
+    longevity: '7–9 Hours',
+    sillage: 'Intimate to Moderate',
+    occasion: 'All-Day Minimalist Signature',
+    reviews: [
+      {
+        id: 'rev-me-1',
+        author: 'Bilal Ahmed',
+        city: 'Islamabad',
+        rating: 5,
+        date: '30 Oct 2026',
+        comment:
+          'Clean, powdery, and calming. Great layering base under Royal Oud or worn solo every morning.',
+        verifiedPurchase: true,
+      },
+    ],
+  },
+  {
+    id: 'fresh-citrus',
+    slug: 'fresh-citrus',
+    name: 'Fresh Citrus',
+    tagline: 'Refreshing citrus fragrance with bright, energetic notes.',
+    description:
+      'A refreshing citrus-inspired fragrance with bright, uplifting and energetic notes. Sparkling Amalfi lemon and blood orange meet crisp verbena and dry vetiver for immediate vitality.',
+    audience: 'Unisex',
+    fragranceFamily: 'Citrus',
+    secondaryFamily: 'Fresh',
+    image: '/src/assets/images/perfume_fresh_citrus_1794923809519.jpg',
+    defaultSize: '50ml',
+    variants: [
+      { size: '10ml', pricePkr: 499 },
+      { size: '30ml', pricePkr: 999 },
+      { size: '50ml', pricePkr: 1999 },
+      { size: '100ml', pricePkr: 2999 },
+    ],
+    notes: {
+      top: ['Amalfi Lemon', 'Blood Orange', 'Pink Grapefruit'],
+      middle: ['Petitgrain', 'Lemon Verbena', 'Fresh Ginger'],
+      base: ['Clean Vetiver', 'Oakmoss', 'Crisp Cedar'],
+    },
+    longevity: '5–7 Hours',
+    sillage: 'Moderate',
+    occasion: 'Morning, Gym & Outdoor Days',
+    reviews: [
+      {
+        id: 'rev-fc-1',
+        author: 'Nadia Tariq',
+        city: 'Multan',
+        rating: 4,
+        date: '15 Oct 2026',
+        comment:
+          'Instant mood boost in Multan heat. Natural zesty lemon and ginger opening.',
+        verifiedPurchase: true,
+      },
+    ],
+  },
+  {
+    id: 'luxury-gift-set',
+    slug: 'luxury-gift-set',
+    name: 'Luxury Gift Set',
+    tagline: 'Curated fragrance gift package for birthdays and anniversaries.',
+    description:
+      'An elegant fragrance gift package, beautifully presented for birthdays, anniversaries and special celebrations. Features five 50ml signature compositions housed in a suede-lined presentation coffret with special bundle pricing.',
+    audience: 'Gift Set',
+    fragranceFamily: 'Oriental',
+    secondaryFamily: 'Woody',
+    badgeText: 'Bundle Pricing',
+    isGiftSet: true,
+    image: '/src/assets/images/perfume_luxury_gift_set_1794923811525.jpg',
+    defaultSize: '5 × 50ml Set',
+    variants: [
+      { size: '5 × 50ml Set', pricePkr: 5999, originalPricePkr: 7500 },
+    ],
+    notes: {
+      top: ['Bergamot', 'Saffron', 'Neroli'],
+      middle: ['Royal Oud', 'Damask Rose', 'Atlas Cedar'],
+      base: ['Golden Amber', 'White Musk', 'Sandalwood'],
+    },
+    longevity: '8–12 Hours',
+    sillage: 'Moderate to Strong',
+    occasion: 'Weddings, Anniversaries & Corporate Gifting',
+    reviews: [
+      {
+        id: 'rev-lgs-1',
+        author: 'Saad Mansoor',
+        city: 'Lahore',
+        rating: 5,
+        date: '01 Nov 2026',
+        comment:
+          'Bought this for my parents’ anniversary. The presentation box looks truly bespoke and every bottle smells distinct.',
+        verifiedPurchase: true,
+      },
+    ],
+  },
+  {
+    id: 'premium-miniatures',
+    slug: 'premium-miniatures',
+    name: 'Premium Miniatures',
+    tagline: 'Five 10ml travel fragrances for exploring different scent styles.',
+    description:
+      'A convenient collection of five miniature fragrances, perfect for travel, gifting and exploring different scent styles. Includes Royal Oud, Black Intense, Rose Elegance, Blue Ocean, and Golden Amber in sleek 10ml glass atomizers.',
+    audience: 'Gift Set',
+    fragranceFamily: 'Fresh',
+    secondaryFamily: 'Oriental',
+    badgeText: 'Discovery Coffret',
+    isGiftSet: true,
+    image: '/src/assets/images/perfume_premium_miniatures_1794923810772.jpg',
+    defaultSize: '5 × 10ml Set',
+    variants: [
+      { size: '5 × 10ml Set', pricePkr: 2499, originalPricePkr: 3100 },
+    ],
+    notes: {
+      top: ['Sicilian Citrus', 'Lychee', 'Cardamom'],
+      middle: ['Damask Rose', 'Marine Accord', 'Tuberose'],
+      base: ['Agarwood Oud', 'Golden Amber', 'White Musk'],
+    },
+    longevity: '6–10 Hours',
+    sillage: 'Versatile',
+    occasion: 'Travel, Discovery & Everyday Rotation',
+    reviews: [
+      {
+        id: 'rev-pm-1',
+        author: 'Maryam Nawazish',
+        city: 'Islamabad',
+        rating: 5,
+        date: '11 Nov 2026',
+        comment:
+          'Best way to try five scents before choosing a 100ml bottle. Fits right into a handbag.',
+        verifiedPurchase: true,
+      },
+    ],
+  },
+];
+
+export const INITIAL_SAMPLE_ORDERS: OrderRecord[] = [
+  {
+    orderId: 'AR-1042',
+    createdAt: '14 Nov 2026, 02:15 PM',
+    status: 'Preparing Shipment',
+    customerName: 'Zainab Raza',
+    phone: '+92 300 5550192',
+    city: 'Lahore',
+    address: 'House 24, Block K, Gulberg III',
+    postalCode: '54660',
+    paymentMethod: 'Cash on Delivery (COD)',
+    deliveryMethod: 'Standard Delivery',
+    items: [
+      {
+        productId: 'royal-oud',
+        name: 'Royal Oud',
+        size: '100ml',
+        quantity: 1,
+        unitPricePkr: 4999,
+        lineTotalPkr: 4999,
+      },
+      {
+        productId: 'rose-elegance',
+        name: 'Rose Elegance',
+        size: '50ml',
+        quantity: 1,
+        unitPricePkr: 2299,
+        lineTotalPkr: 2299,
+      },
+    ],
+    subtotalPkr: 7298,
+    multiBottleDiscountPkr: 365,
+    promoDiscountPkr: 0,
+    deliveryChargePkr: 0,
+    totalPkr: 6933,
+    appliedPromoLabel: 'Buy 2 Perfumes (5% Off)',
+  },
+];
